@@ -1,0 +1,9 @@
+server:
+  port: 8095
+
+kafka:
+  bootstrap-servers: localhost:29092
+  username: da
+  password: 111111
+  ssl-truststore-location: /home/pavel/DockerProjects/kafka-compose/truststore/kafka.truststore.jks
+  ssl-truststore-password: supersecret

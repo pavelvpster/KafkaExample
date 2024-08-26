@@ -1,0 +1,4 @@
+rootProject.name = 'KafkaExample'
+include 'producer'
+include 'consumer'
+
