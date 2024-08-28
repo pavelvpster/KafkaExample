@@ -5,8 +5,6 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 @RequiredArgsConstructor
@@ -18,8 +16,6 @@ public class RandomNumberProducer {
 
     @Scheduled(fixedRate = 5000)
     public void send() {
-        kafkaTemplate.send("test-topic",
-                ZonedDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME),
-                Double.toString(random.nextDouble()));
+        kafkaTemplate.send("test-topic", Double.toString(random.nextDouble()));
     }
 }
